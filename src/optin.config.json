@@ -1,0 +1,45 @@
+{
+  "eslint": {
+    "added": true,
+    "devDeps": [
+      "eslint",
+      "eslint-config-prettier",
+      "eslint-plugin-better-styled-components",
+      "eslint-plugin-filenames",
+      "eslint-plugin-jsx-a11y",
+      "eslint-plugin-prettier",
+      "eslint-plugin-react",
+      "eslint-plugin-react-hooks",
+      "prettier"
+    ],
+    "regularDeps": [],
+    "configAddresses": [
+      "https://raw.githubusercontent.com/OlaoluwaM/thefellowshipoftheconfigs/main/.eslintrc.js",
+      "https://raw.githubusercontent.com/OlaoluwaM/thefellowshipoftheconfigs/main/.eslintignore",
+      "https://raw.githubusercontent.com/OlaoluwaM/thefellowshipoftheconfigs/main/.prettierrc",
+      "https://raw.githubusercontent.com/OlaoluwaM/thefellowshipoftheconfigs/main/.prettierignore"
+    ]
+  },
+  "tailwindCSS": {
+    "added": false,
+    "devDeps": [],
+    "regularDeps": ["tailwindcss@latest", "postcss@latest", "autoprefixer@latest"],
+    "configAddresses": [
+      "https://raw.githubusercontent.com/OlaoluwaM/thefellowshipoftheconfigs/main/postcss.config.js"
+    ]
+  },
+  "tailwindCSSCRA": {
+    "added": false,
+    "devDeps": [
+      "tailwindcss@npm:@tailwindcss/postcss7-compat",
+      "@tailwindcss/postcss7-compat",
+      "postcss@^7",
+      "autoprefixer@^9"
+    ],
+    "regularDeps": ["@craco/craco"],
+    "configAddresses": [
+      "https://raw.githubusercontent.com/OlaoluwaM/thefellowshipoftheconfigs/main/craco.config.js"
+    ]
+  },
+  "jest": { "added": false, "devDeps": [], "regularDeps": [], "configAddresses": [] }
+}
