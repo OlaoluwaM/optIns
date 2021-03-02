@@ -7,7 +7,7 @@ scriptPath=$(dirname $(realpath $0))
 # Path to project root
 rootPath=$(dirname $(dirname $(dirname $(realpath $0))))
 
-jsonPath="${scriptPath}/opt-in.config.json"
+jsonPath="${scriptPath}/optIn.config.json"
 # This is to check the opt-in.json file whether this dependency has already been added
 isAdded=$(cat $jsonPath | jq ".eslint.added")
 
