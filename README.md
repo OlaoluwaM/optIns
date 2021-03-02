@@ -11,12 +11,11 @@ In order to use this tool you will need to install the following
 
 + ESLint
 + Tailwind Css
-+ Jest
++ Tailwind Css with CRA
 
 ## How it works
 
-Each script will ``npm install`` all the required packages for the specified tool. After, it will grab a config from my configs repo for that specified dependency and copy it to the root of the project directory
-
-# Important
-
-**Make sure to run this scripts in the root of your project directory**.
+Each script will ``npm install`` all the required packages for the specified tool.
+After, it will grab a config from my configs repo for that specified dependency and copy it to the root of the project directory
+Then it will perform any custom commands afterwards
+Additionally, if the dependency is already installed in the project running the script will remove it
