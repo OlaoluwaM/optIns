@@ -31,17 +31,19 @@ if [ "$isAdded" = false ]; then
 
   # Set it "tailwindCSS" to true in opt-in.json
   echo $(jq '.tailwindCSS.added = true' $jsonPath) >$jsonPath
-  echo "Installing necessary packages"
 
   installationStatus="Installation successful"
 
-  if [ $devDepSize -gt 0 ]; then
-    npm i -D ${devDeps[@]}
+  [ $regularDepsSize -eq 0 ] && [ $devDepSize -gt 0 ] && installationStatus="No Packages to install"
 
-  elif [ $regularDepsSize -gt 0 ]; then
+  if [ $regularDepsSize -gt 0 ]; then
+    echo "Installing regular dependencies"
     npm i ${regularDeps[@]}
-  else
-    installationStatus="No Packages to install"
+  fi
+
+  if [ $devDepSize -gt 0 ]; then
+    echo "Installing dev dependencies"
+    npm i -D ${devDeps[@]}
   fi
 
   echo "${installationStatus}. Fetching configs.."
