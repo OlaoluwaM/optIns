@@ -1,6 +1,6 @@
 {
   "eslint": {
-    "added": true,
+    "added": false,
     "devDeps": [
       "eslint",
       "eslint-config-prettier",
