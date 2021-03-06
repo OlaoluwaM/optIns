@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 # Path to this script
-scriptPath=$(dirname $(realpath $0))
+scriptDirPath=$(dirname $(dirname $(dirname $(realpath $0))))
 
 # Path to project root
-rootPath=$(dirname $(dirname $(dirname $(realpath $0))))
+rootPath=$(dirname $(dirname $(dirname $(dirname $(dirname $(realpath $0))))))
 
-jsonPath="${scriptPath}/optIn.config.json"
+# Path to config json file
+jsonPath="${scriptDirPath}/optIn.config.json"
 
 # This is to check the optIn.json file whether this dependency has already been added
 isAdded=$(cat $jsonPath | jq ".tailwindCSSCRA.added")
@@ -73,7 +74,7 @@ echo $(jq '.scripts.build = "react-scripts build"' "${rootPath}/package.json") >
 echo $(jq '.scripts.test = "react-scripts test"' "${rootPath}/package.json") >$rootPath/package.json
 
 echo "Removing tailwind.js and tailwind.css"
-[ "$useDefaultConfigFile" = false ] && rm "${rootPath}/tailwind.js"
+[ "$useDefaultConfigFile" = true ] && rm "${rootPath}/tailwind.js"
 
 rm "${rootPath}/src/tailwind.css"
 
