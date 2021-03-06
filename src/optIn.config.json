@@ -22,11 +22,14 @@
   },
   "tailwindCSS": {
     "added": false,
-    "devDeps": [],
+    "devDeps": ["sass"],
     "regularDeps": ["tailwindcss@latest", "postcss@latest", "autoprefixer@latest"],
     "configAddresses": [
       "https://raw.githubusercontent.com/OlaoluwaM/thefellowshipoftheconfigs/main/postcss.config.js"
-    ]
+    ],
+    "customProperties": {
+      "useDefaultConfigFile": true
+    }
   },
   "tailwindCSSCRA": {
     "added": false,
@@ -34,12 +37,16 @@
       "tailwindcss@npm:@tailwindcss/postcss7-compat",
       "@tailwindcss/postcss7-compat",
       "postcss@^7",
-      "autoprefixer@^9"
+      "autoprefixer@^9",
+      "sass"
     ],
     "regularDeps": ["@craco/craco"],
     "configAddresses": [
       "https://raw.githubusercontent.com/OlaoluwaM/thefellowshipoftheconfigs/main/craco.config.js"
-    ]
+    ],
+    "customProperties": {
+      "useDefaultConfigFile": true
+    }
   },
   "jest": { "added": false, "devDeps": [], "regularDeps": [], "configAddresses": [] }
 }

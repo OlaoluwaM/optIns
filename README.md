@@ -1,6 +1,6 @@
-# A collection of opt-in scripts
+# A collection of optIn scripts
 
-These scripts allow you to opt-in for certain tools/dependencies for your project
+These scripts allow you to optIn for certain tools/dependencies for your project
 
 In order to use this tool you will need to install the following
 
