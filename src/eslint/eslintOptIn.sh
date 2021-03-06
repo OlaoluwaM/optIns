@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
-
 # Path to this script
-scriptPath=$(dirname $(realpath $0))
+scriptDirPath=$(dirname $(dirname $(realpath $0)))
 
 # Path to project root
-rootPath=$(dirname $(dirname $(dirname $(realpath $0))))
+rootPath=$(dirname $(dirname $(dirname $(dirname $(realpath $0)))))
 
 # Path to config json file
-jsonPath="${scriptPath}/optIn.config.json"
+jsonPath="${scriptDirPath}/optIn.config.json"
 
 # This is to check the optIn.json file whether this dependency has already been added
 isAdded=$(cat $jsonPath | jq ".eslint.added")
