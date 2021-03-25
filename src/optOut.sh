@@ -104,9 +104,9 @@ customScriptsFolder="${rootPath}/optIn_custom_scripts/${tool}/optOut"
 
 if [[ -d "$customScriptsFolder" ]]; then
   for script in $customScriptsFolder/*; do
-    if [[ "$script" =~ ".js$" ]]; then
+    if [[ $script == *.js ]]; then
       $(which node) $script
-    elif [[ "$script" =~ ".sh$" ]]; then
+    elif [[ $script == *.sh ]]; then
       source $script
     fi
   done
