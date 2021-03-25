@@ -1,2 +1,5 @@
 src/webpack.sh
 localSrc
+test_dir
+test
+old_src

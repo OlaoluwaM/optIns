@@ -10,12 +10,15 @@ In order to use this tool you will need to install the following
 ## Currently Supported Dependencies
 
 + ESLint
-+ Tailwind Css
-+ Tailwind Css with CRA
++ Tailwind CSS
++ Tailwind CSS with CRA
 
 ## How it works
 
-Each script will ``npm install`` all the required packages for the specified tool.
-After, it will grab a config from my configs repo for that specified dependency and copy it to the root of the project directory
-Then it will perform any custom commands afterwards
-Additionally, if the dependency is already installed in the project running the script will remove it
++ Each script will ``npm install`` all the required packages for the specified tool.
++ After, it will grab a config from my configs repo for that specified dependency and copy it to the root of the project directory
++ Then it will perform any custom commands afterwards
++ Additionally, if the dependency is already installed in the project running the script will remove it
++ You can have your own custom ``optIn.config.json`` file at the root directory of your project for the scripts to use in both opt-in and opt-out. Check out the example ``optIn.config.json`` file in the src for how to structure your own
+
++ You can add custom commands for the scripts to run at the end for each dependency/tool in the ``optIn.config.json`` file
