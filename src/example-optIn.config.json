@@ -1,0 +1,11 @@
+{
+  "jest": {
+    "added": false,
+    "devDeps": [],
+    "regularDeps": [],
+    "configAddresses": [],
+    "customCommands": [],
+    "otherFilesToRemove": [],
+    "customScripts": []
+  }
+}
